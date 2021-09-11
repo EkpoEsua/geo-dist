@@ -11,12 +11,12 @@ It works by:
 Also the given a known valid latitude and longitude coordinates, the distance from Moscow Ring Road can be computed.
 
 # Installing the app locally.
-In order to use the app, ensure at least `python3 version 3.8` is available:
+In order to use the app, ensure at least `python3 version 3.8.10` is available locally:
 
-* Clone the repository
+* Clone the repository: `git clone https://github.com/EkpoEsua/geo-dist.git`
 
-* Change directory
+* Change directory: `cd geo-dist/`
 
-* Run the setup/start script:
- 
-    `./start.sh`
+* Run the setup/start script: `./start.sh`
+
+* Open [localhost](http://127.0.0.1:5000/) on a browser.
