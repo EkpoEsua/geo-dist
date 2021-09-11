@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block title %}
+Distance Result - 
+{% endblock %}
+
+{% block results %}
+<hr>
+<div>
+    {% if context['success'] %}
+        {% if context['distance'] == -1 %}
+            <p>Location is within MKAD</p>
+        {% else %}
+            <p>Distance from 
+                    {% if context['name'] %}
+                        <strong>{{ context['name'] }}</strong>
+                    {% else %}
+                        <strong>
+                            Lat: {{ context['latitude'] }} | 
+                            Lon: {{ context['longitude'] }}
+                        </strong>
+                    {% endif %}
+                    to <strong>Moscow Ring Road</strong>: 
+                        {{ context['distance'] }} km
+            </p>
+        {% endif %}
+     {% else %}
+            Error in Latitude and/or Longitude values, ex. 58.34553234 .
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block title %}
+Results - 
+{% endblock %}
+
+{% block results %}
+<hr>
+<div>
+{% if context["searched"] %}
+    <p>Results for <strong>{{ context["address"] }}</strong></p>
+    {% if context["found"] %}
+        {% for result in context["results"]%}
+            <p><a href="{{ url_for('calculate.calculate')}}?lat={{ result['latitude'] }}&lon={{ result['longitude'] }}&name={{ result['name'] }}">{{ result["name"] }}</a></p>
+        {% endfor %}
+    {% else %}
+        {% if context["ok"] %}
+            <p>No Results Found. </p>
+        {% else %}
+            <p>Search Error, Try Again.</p>
+        {% endif %}
+    {% endif %}
+{% else %}
+    <p>Invalid Search.</p>
+{% endif %}
+</div>
+{% endblock %}
