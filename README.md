@@ -20,3 +20,29 @@ In order to use the app, ensure at least `python3 version 3.8.10` is available l
 * Run the setup/start script: `./start.sh`
 
 * Open [localhost](http://127.0.0.1:5000/) on a browser.
+
+# Run as container locally.
+To run as a container, ensure [docker](https://docs.docker.com/get-docker/) is set up.
+
+* run `docker run -dp 5000:5000 --name bluekale esuaekpo/geo-dist:alpine`
+
+* Open [localhost](http://127.0.0.1:5000/) on a browser.
+
+
+# Run as container online with PWD
+
+* Go to [Play with Docker](https://labs.play-with-docker.com/).
+
+* Click Login and then select docker from the drop-down list.
+
+* Connect with your Docker Hub account.
+
+* Once you’re logged in, click on the ADD NEW INSTANCE option on the left side bar. If you don’t see it, make your browser a little wider. After a few seconds, a terminal window opens in your browser.
+
+![PWD screenshot](https://docs.docker.com/get-started/images/pwd-add-new-instance.png)
+
+* In the terminal, start the app.
+
+    `docker run -dp 5000:5000 --name bluekale esuaekpo/geo-dist:alpine`
+
+* Click on the 5000 badge when it comes up and you should see the app, If the 5000 badge doesn’t show up, you can click on the “Open Port” button and type in 5000.
