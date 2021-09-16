@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xe
 
 python3 -m venv venv
 
